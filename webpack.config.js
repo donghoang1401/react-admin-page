@@ -20,7 +20,7 @@ const webpackConfig = () => ({
     modules: [path.resolve(__dirname, "src"), "node_modules"],
   },
   output: {
-    path: path.join(__dirname, "/build"),
+    path: path.join(__dirname, "/dist"),
     filename: "bundle.js",
   },
   module: {
@@ -28,7 +28,7 @@ const webpackConfig = () => ({
       {
         test: /\.(js|jsx)$/,
         include: path.resolve(__dirname, "src"),
-        exclude: /build/,
+        exclude: /node_modules/,
         resolve: {
           fullySpecified: false,
         },
