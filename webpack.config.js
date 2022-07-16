@@ -14,7 +14,7 @@ const webpackConfig = () => ({
   mode: "development",
   entry: "./src/index.js",
   resolve: {
-    extensions: [".ts", ".tsx", ".js"],
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
     // @ts-ignore
     plugins: [new TsconfigPathsPlugin({ configFile: "./tsconfig.json" })],
     modules: [path.resolve(__dirname, "src"), "node_modules"],

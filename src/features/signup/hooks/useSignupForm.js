@@ -27,7 +27,7 @@ export const useSignupForm = ({ defaultValues, setShow }) => {
         ...data,
         roles,
       };
-
+      setShow(false)
       await mutateAsync(actData);
     } catch (e) {}
   };

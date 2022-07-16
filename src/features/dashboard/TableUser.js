@@ -21,7 +21,6 @@ export const TableUser = ({
             <th>Username</th>
             <th>Email</th>
             <th>Authorities</th>
-            <th>Enabled</th>
             {isAdmin && <th>Actions</th>}
           </tr>
         </thead>
@@ -51,9 +50,6 @@ export const TableUser = ({
                       {v.authority}
                     </p>
                   ))}
-                </td>
-                <td key={v4()}>
-                  {boolToStr(v.enabled)}
                 </td>
                 {isAdmin && (
                   <td key={`delete-${i}`} id={`delete-${i}`}>

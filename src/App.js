@@ -21,7 +21,7 @@ const Dashboard = lazy(() =>
   import(/* webpackChunkName: "dashboard" */ "./features/dashboard/Dashboard")
 );
 
-axios.defaults.baseURL = "http://localhost:8080";
+axios.defaults.baseURL = "http://authentication-api-dev.us-west-2.elasticbeanstalk.com";
 export const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
