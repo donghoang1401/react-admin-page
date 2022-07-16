@@ -27,12 +27,16 @@ const webpackConfig = () => ({
     rules: [
       {
         test: /\.(js|jsx|tsx|ts)$/,
-        include: [path.resolve(__dirname, 'src')],
+        include: [path.resolve(__dirname, "src")],
         loader: "babel-loader",
         exclude: /build/,
         resolve: {
-            fullySpecified: false,
-          },
+          fullySpecified: false,
+        },
+        options: {
+          presets: ["@babel/preset-env"],
+          plugins: ['@babel/plugin-transform-runtime'],
+        },
       },
       {
         test: /\.s?css$/,
