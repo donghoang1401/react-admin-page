@@ -21,12 +21,12 @@ const webpackConfig = () => ({
   },
   output: {
     path: path.join(__dirname, "/build"),
-    filename: "admin.bundle.js",
+    filename: "bundle.js",
   },
   module: {
     rules: [
       {
-        test: /\.js$|jsx|tsx|ts/,
+        test: /\.js$|jsx/,
         include: path.resolve(__dirname, "src"),
         exclude: /build/,
         resolve: {
@@ -46,26 +46,6 @@ const webpackConfig = () => ({
           "style-loader",
           "css-loader",
           "sass-loader",
-        ],
-      },
-      {
-        test: /\.(eot|ttf|woff|woff2)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[path][name].[ext]",
-            },
-          },
-        ],
-      },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: "[path][name].[ext]",
-          },
         ],
       },
     ],
