@@ -26,7 +26,7 @@ const webpackConfig = () => ({
   module: {
     rules: [
       {
-        test: /\.(js|jsx|tsx|ts)$/,
+        test: /\.js$|jsx|tsx|ts/,
         include: path.resolve(__dirname, "src"),
         exclude: /build/,
         resolve: {
