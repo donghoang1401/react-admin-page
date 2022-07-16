@@ -9,7 +9,7 @@ import { ReactQueryDevtools } from "react-query/devtools";
 
 const LoginPage = lazy(() =>
   import(
-    /* webpackChunkName: "login" */ /* webpackPreload: true */ "./features/login/LoginPage"
+    /* webpackChunkName: "admin" */ /* webpackPreload: true */ "./features/login/LoginPage"
   )
 );
 

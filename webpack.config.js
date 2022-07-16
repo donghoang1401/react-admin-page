@@ -21,26 +21,32 @@ const webpackConfig = () => ({
   },
   output: {
     path: path.join(__dirname, "/build"),
-    filename: "signup.bundle.js",
+    filename: "admin.bundle.js",
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx|tsx|ts)$/,
-        include: [path.resolve(__dirname, "src")],
-        loader: "babel-loader",
+        include: path.resolve(__dirname, "src"),
         exclude: /build/,
         resolve: {
           fullySpecified: false,
         },
-        options: {
-          presets: ["@babel/preset-env"],
-          plugins: ['@babel/plugin-transform-runtime'],
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+            plugins: ["@babel/plugin-transform-runtime"],
+          },
         },
       },
       {
         test: /\.s?css$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [
+          "style-loader",
+          "css-loader",
+          "sass-loader",
+        ],
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
