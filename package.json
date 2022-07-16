@@ -33,7 +33,7 @@
   },
   "scripts": {
     "start": "webpack-cli serve --mode=development --open --hot --config webpack.config.js",
-    "build": "webpack --config webpack.config.js",
+    "build": "webpack --mode production",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "webpack-dev-server": "webpack-dev-server",
