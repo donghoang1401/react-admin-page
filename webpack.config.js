@@ -20,7 +20,7 @@ const webpackConfig = () => ({
     modules: [path.resolve(__dirname, "src"), "node_modules"],
   },
   output: {
-    path: path.join(__dirname, "/dist"),
+    path: path.join(__dirname, "/build"),
     filename: "bundle.js",
   },
   module: {
